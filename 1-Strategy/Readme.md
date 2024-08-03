@@ -21,11 +21,11 @@
 
 # Strategy Pattern
 
-<aside>
-💡 We need the strategy pattern when:
-    - A `localized` update to the code caused a `nonlocal side effect` (flying rubber ducks)!
-    - Every other solution related to interfaces causes the `loss` of reusability.
-</aside>
+
+> 💡 **We need the strategy pattern when:**
+> - A `localized` update to the code causes a `nonlocal side effect` (flying rubber ducks)!
+> - Every other solution related to interfaces causes the `loss` of reusability.
+
 
 > **From refactoring.guru :** 
 **`Strategy`** is a behavioral design pattern that lets you define a family of algorithms, put each of them into a separate class, and make their objects interchangeable.
@@ -42,9 +42,7 @@
     2. **Favor Composition over inheritance** 
     3. **Program to an interface not to an implementation (Polymorphism, Polymorphic references)**
     
-    <aside>
-    💡 Programming to an interface means Programming to a Super Type
-    </aside>
+>💡 Programming to an interface means Programming to a Super Type
     
 2. So according to the point number (1) what varies in our system is the fly and the quack behaviors other than that remains constant. 
 3. What we will do is separating the behaviors into a new set of classes (family of algorithms) that implements a common interface (Super Type)
@@ -57,22 +55,21 @@
     ![Untitled](https://fluttering-turkey-fba.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F7556c6be-038c-4f7c-afa6-a36298e5183c%2F77a36671-a8e3-4e60-852f-3d07dddc823a%2FUntitled.png?table=block&id=e9df262b-3165-4c73-84fd-2c27f7ad5dc4&spaceId=7556c6be-038c-4f7c-afa6-a36298e5183c&width=1440&userId=&cache=v2)
     
 
-<aside>
-💡 There is a slight problem here 
-the constructor of each duck class sets the behavior itself like
+> 💡 There is a slight problem here 
+>the constructor of each duck class sets the behavior itself like
+>
+>```jsx
+>public MallardDuck() {
+>quackBehavior = new Quack();
+>flyBehavior = new FlyWithWings();
+>}
+>```
+>
+>Which violates the principle ⇒ **Program to an interface not to an implementation (Polymorphism, Polymorphic references)**
+>
+>The book mentioned it will be solved along the book but I can say it can easily solved by applying dependency inversion principle (dependency injection)
+>But also I’m sure I will discover other ways to solve that during my HFDP journey
 
-```jsx
-public MallardDuck() {
-quackBehavior = new Quack();
-flyBehavior = new FlyWithWings();
-}
-```
-
-Which violates the principle ⇒ **Program to an interface not to an implementation (Polymorphism, Polymorphic references)**
-
-The book mentioned it will be solved along the book but I can say it can easily solved by applying dependency inversion principle (dependency injection)
-But also I’m sure I will discover other ways to solve that during my HFDP journey
-</aside>
 
 # What the strategy pattern gave us more than solving our small problem
 
@@ -80,10 +77,7 @@ But also I’m sure I will discover other ways to solve that during my HFDP jour
 2. Any new behavior class that follow the fly or quack behaviors can easily added by creating a new class 
 3. Any new behavior type that is completely different from the quack and fly behaviors can easily added with minimum change to the old duck classes
     
-    <aside>
-    💡 The points 2 & 3 are coming from the fact that the duck classes are completely decoupled from the behaviors classes
-    
-    </aside>
+>💡 The points 2 & 3 are coming from the fact that the duck classes are completely decoupled from the behaviors classes
     
 4. Any class that is not a duck can easily use our behaviors classes (e.g. the duck call device)
 
