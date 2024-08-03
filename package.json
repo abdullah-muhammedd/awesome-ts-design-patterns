@@ -1,0 +1,24 @@
+{
+  "name": "design-patterns",
+  "version": "1.0.0",
+  "description": "Abdullah Muhammed's notes and implemintation for the design patterns in the book head first design patterns",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "npm.cmd run compile",
+    "pretest": "npm.cmd run compile",
+    "posttest": "npm.cmd run lint",
+    "start": "node ./dist/index.js"
+  },
+  "author": "Abdullah Muhammed",
+  "license": "MIT",
+  "devDependencies": {
+    "gts": "^5.3.1",
+    "typescript": "^5.5.4",
+    "@types/node": "20.12.7"
+  }
+}
