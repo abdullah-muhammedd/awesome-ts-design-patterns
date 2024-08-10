@@ -17,8 +17,8 @@
   "author": "Abdullah Muhammed",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^20.12.7",
     "gts": "^5.3.1",
-    "typescript": "^5.5.4",
-    "@types/node": "20.12.7"
+    "typescript": "^5.5.4"
   }
 }
