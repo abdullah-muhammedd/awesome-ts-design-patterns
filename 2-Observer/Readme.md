@@ -49,8 +49,7 @@ public class WeatherData {
 
 
 > 💡 We need the observer pattern when:
-> - Use the Observer pattern when changes to the state of one object may require changing other objects, and the actual set of 
-> - objects is unknown beforehand or changes dynamically.
+> - Use the Observer pattern when changes to the state of one object may require changing other objects, and the actual set of objects is unknown beforehand or changes dynamically.
 
 
 > **From refactoring.guru :**
@@ -100,8 +99,6 @@ The Communication Mechanism in the Observer pattern handles the interaction betw
     - **We never need to modify the subject to add new types of observers**. Let’s say we have a new concrete class come along that needs to be an observer. We don’t need to make any changes to the subject to accommodate the new class type, all we have to do is implement the Observer interface in the new class and register as an observer. The subject doesn’t care; it will deliver notifications to any object that implements the Observer interface.
     - **We can reuse subjects or observers independently of each other**. If we have another use for a subject or an observer, we can easily reuse them because the two aren’t tightly coupled.
     - **Changes to either the subject or an observer will not affect the other**. Because the two are loosely coupled, we are free to make changes to either, as long as the objects still meet their obligations to implement the subject or observer interfaces.
-    1. **Define Strategy Interface**: Create an interface that represents the sorting strategy.
-    2. **Implement Concrete Strategies**: Implement different sorting strategies.
 
 
 > 💡 **Loosely coupled designs allow us to build flexible OO systems that can handle change because they minimize the interdependency between objects.**
