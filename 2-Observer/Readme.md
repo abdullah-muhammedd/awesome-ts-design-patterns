@@ -273,8 +273,6 @@ export default FormField;
 
 ### **Real-World Scenario: Real-Time Logging System**
 
-**Scenario Name**: **Server Request Logging**
-
 In a Node.js application, you may want to log requests to different outputs (e.g., console, file, external logging service) whenever an HTTP request is received by the server.
 
 ### **Example: Using Classes and Interfaces (TypeScript)**
@@ -364,5 +362,3 @@ server.listen(3000, () => console.log("Server is running on port 3000"));
 
 - **Ease of Use**: The `EventEmitter` class simplifies the implementation of the Observer pattern.
 - **Built-In Node.js Integration**: Leverages Node.js's native event system, making the code concise and efficient.
-
-These examples show how the Observer pattern can be applied in common scenarios within a MERN stack, providing flexibility and modularity in handling dynamic updates.
