@@ -79,13 +79,13 @@
 
     /* Type Checking */
     "strict": true,
-    // "noImplicitAny": true,
+    "noImplicitAny": false,
     // "strictNullChecks": true,
     // "strictFunctionTypes": true,
     // "strictBindCallApply": true,
     // "strictPropertyInitialization": true,
     // "noImplicitThis": true,
-    // "useUnknownInCatchVariables": true,
+    "useUnknownInCatchVariables": false,
     // "alwaysStrict": true,
     // "noUnusedLocals": true,
     // "noUnusedParameters": true,
